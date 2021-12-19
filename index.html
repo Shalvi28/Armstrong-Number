@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<title>Armstrong Number</title>
+<style>
+    body {
+        background: linear-gradient(pink, yellow, green);
+        margin:200px 350px;
+    }
+    div{
+        background: linear-gradient(rgb(131, 131, 138), black);
+        text-align: center;
+        height: 20vh;
+        width:50vw;
+        padding-top: 50px;
+    }
+    button{
+            border:none;
+            padding: 5px 20px;
+            background-color: rgb(187, 233, 23);
+        }
+
+</style>
+</head>
+<body>
+    <div>
+<p style="color: white;">Enter any Number: <input type="number" id="no_input"></p>
+<button onclick="armstr()">Check</button></br></br>
+</div>
+<script>
+    
+    function armstr()
+    {
+    var arm=0,a,b,c,d,num;
+    num=Number(document.getElementById("no_input").value);
+    
+    temp=num;
+    while(temp > 0)
+    {
+    a = temp%10;
+    temp=parseInt(temp/10);
+    arm=arm+a*a*a;
+    }
+    if(arm=="")
+    {
+        alert("Enter the number");
+    }
+    else if(arm==num)
+    {
+    alert("Armstrong number");
+    }
+    else
+    {
+    alert("Not Armstrong number");
+    }
+    }
+   
+    </script>
+</body>
+</html>
